@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace rcmco.console
+namespace RLM
 {
     class Program
     {
