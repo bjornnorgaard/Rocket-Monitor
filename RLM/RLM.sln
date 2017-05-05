@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMonitor", "RocketMoni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMonitor.Console", "RocketMonitor.Console\RocketMonitor.Console.csproj", "{FEE84DDB-71C3-425C-9430-261A134A56A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMonitor.Test", "RocketMonitor.Test\RocketMonitor.Test.csproj", "{F80553FC-2688-4CF0-ABAA-8A5B3FB39BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80553FC-2688-4CF0-ABAA-8A5B3FB39BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80553FC-2688-4CF0-ABAA-8A5B3FB39BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80553FC-2688-4CF0-ABAA-8A5B3FB39BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80553FC-2688-4CF0-ABAA-8A5B3FB39BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
