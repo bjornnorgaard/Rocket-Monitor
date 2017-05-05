@@ -14,7 +14,7 @@ namespace RocketMonitor
                 var line = lines[index];
                 if (line.Contains("ResX=1920"))
                 {
-                    lines[index] = "ResX="+newResolution;
+                    lines[index] = "ResX=" + newResolution;
                 }
             }
 
