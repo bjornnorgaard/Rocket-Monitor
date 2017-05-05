@@ -7,13 +7,19 @@ namespace RLM
     {
         static void Main(string[] args)
         {
-            var path = Environment.GetEnvironmentVariable("USERPROFILE") + "\\Documents\\my games\\Rocket League\\TAGame\\Config";
-            var files = Directory.GetFiles(path);
+            var path = Environment.GetEnvironmentVariable("USERPROFILE") + "\\Documents\\my games\\Rocket League\\TAGame\\Config\\TASystemSettings.ini";
+            var lines = File.ReadAllLines(path);
 
-            foreach (var file in files)
+            for (var index = 0; index < lines.Length; index++)
             {
-                Console.WriteLine(file);
+                var line = lines[index];
+                if (line.Contains("ResX=1920"))
+                {
+                    lines[index] = "ResX=3840";
+                }
             }
+
+            File.WriteAllLines(path, lines);
         }
     }
 }
