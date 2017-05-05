@@ -1,13 +1,12 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
-namespace RLM
+namespace RocketMonitor
 {
-    class Program
+    public class RocketMonitor
     {
-        static void Main(string[] args)
+        public void ChangeCoopResolution(string filePath, string newResolution)
         {
-            var path = Environment.GetEnvironmentVariable("USERPROFILE") + "\\Documents\\my games\\Rocket League\\TAGame\\Config\\TASystemSettings.ini";
+            var path = filePath;
             var lines = File.ReadAllLines(path);
 
             for (var index = 0; index < lines.Length; index++)
@@ -15,7 +14,7 @@ namespace RLM
                 var line = lines[index];
                 if (line.Contains("ResX=1920"))
                 {
-                    lines[index] = "ResX=3840";
+                    lines[index] = "ResX="+newResolution;
                 }
             }
 

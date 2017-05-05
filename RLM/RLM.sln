@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RLM", "RLM\RLM.csproj", "{3F9A3440-8B3E-45CB-9383-67E1C24C9028}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMonitor", "RocketMonitor\RocketMonitor.csproj", "{A3EB2275-6A03-47E2-BAF1-CCEF7E530FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMonitor.Console", "RocketMonitor.Console\RocketMonitor.Console.csproj", "{FEE84DDB-71C3-425C-9430-261A134A56A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F9A3440-8B3E-45CB-9383-67E1C24C9028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F9A3440-8B3E-45CB-9383-67E1C24C9028}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F9A3440-8B3E-45CB-9383-67E1C24C9028}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F9A3440-8B3E-45CB-9383-67E1C24C9028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3EB2275-6A03-47E2-BAF1-CCEF7E530FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3EB2275-6A03-47E2-BAF1-CCEF7E530FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3EB2275-6A03-47E2-BAF1-CCEF7E530FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3EB2275-6A03-47E2-BAF1-CCEF7E530FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE84DDB-71C3-425C-9430-261A134A56A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
