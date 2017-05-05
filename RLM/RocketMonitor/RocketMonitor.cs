@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace RocketMonitor
 {
@@ -6,8 +7,14 @@ namespace RocketMonitor
     {
         public void ChangeResolution(string filePath, string newResolution)
         {
-            var path = filePath;
-            var lines = File.ReadAllLines(path);
+            if (filePath == null || newResolution == null)
+            {
+                throw new ArgumentException($"{nameof(ChangeResolution)} failed when given " +
+                                            $"{nameof(filePath)}: {filePath} and " +
+                                            $"{nameof(newResolution)}: {newResolution}.");
+            }
+
+            var lines = File.ReadAllLines(filePath);
 
             for (var index = 0; index < lines.Length; index++)
             {
@@ -18,7 +25,7 @@ namespace RocketMonitor
                 }
             }
 
-            File.WriteAllLines(path, lines);
+            File.WriteAllLines(filePath, lines);
         }
     }
 }
