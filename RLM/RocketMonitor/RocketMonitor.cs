@@ -4,7 +4,7 @@ namespace RocketMonitor
 {
     public class RocketMonitor
     {
-        public void ChangeCoopResolution(string filePath, string newResolution)
+        public void ChangeResolution(string filePath, string newResolution)
         {
             var path = filePath;
             var lines = File.ReadAllLines(path);

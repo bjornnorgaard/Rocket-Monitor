@@ -11,7 +11,7 @@ namespace RocketMonitor.Console
             var filePath = Environment.GetEnvironmentVariable("USERPROFILE") + "\\Documents\\my games\\Rocket League\\TAGame\\Config\\TASystemSettings.ini";
             var newResolution = "3840";
 
-            rocketMonitor.ChangeCoopResolution(filePath, newResolution);
+            rocketMonitor.ChangeResolution(filePath, newResolution);
         }
     }
 }
