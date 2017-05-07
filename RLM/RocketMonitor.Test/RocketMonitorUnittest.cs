@@ -8,7 +8,6 @@ namespace RocketMonitor.Test
         private readonly RocketMonitor _rocketMonitor;
         string _filePath = Environment.GetEnvironmentVariable("USERPROFILE") + "\\Documents\\my games\\Rocket League\\TAGame\\Config\\TASystemSettings.ini";
 
-
         public RocketMonitorUnittest()
         {
             _rocketMonitor = new RocketMonitor();
