@@ -7,9 +7,7 @@ Then we avoid the dreaded splitscreen scenarios.
 
 ## How to download
 
-Still working on this bit. 
-
-See  next section about compiling it, in order to obtain and use the application.
+Latest release is contained in the .7z file under 'Releases'.
 
 ## How to compile it
 
