@@ -19,9 +19,12 @@ namespace RocketMonitor
             for (var index = 0; index < lines.Length; index++)
             {
                 var line = lines[index];
-                if (line.Contains("ResX=1920"))
+                for (int i = 1; i < 5; i++)
                 {
-                    lines[index] = "ResX=" + newResolution;
+                    if (line.Contains($"ResX={1920*i}"))
+                    {
+                        lines[index] = "ResX=" + newResolution;
+                    }
                 }
             }
 
