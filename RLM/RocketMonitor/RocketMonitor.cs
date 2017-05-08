@@ -9,8 +9,23 @@ namespace RocketMonitor
         {
             if (filePath == null || newResolution == null)
             {
+                throw new NullReferenceException($"{nameof(ChangeResolution)} failed when given " +
+                                                 $"{nameof(filePath)}: {filePath} and " +
+                                                 $"{nameof(newResolution)}: {newResolution}.");
+            }
+
+            var validResolution = false;
+            for (var i = 1; i < 5; i++)
+            {
+                if (int.Parse(newResolution) == 1920 * i)
+                {
+                    validResolution = true;
+                }
+            }
+
+            if (validResolution == false)
+            {
                 throw new ArgumentException($"{nameof(ChangeResolution)} failed when given " +
-                                            $"{nameof(filePath)}: {filePath} and " +
                                             $"{nameof(newResolution)}: {newResolution}.");
             }
 
@@ -19,9 +34,9 @@ namespace RocketMonitor
             for (var index = 0; index < lines.Length; index++)
             {
                 var line = lines[index];
-                for (int i = 1; i < 5; i++)
+                for (var i = 1; i < 5; i++)
                 {
-                    if (line.Contains($"ResX={1920*i}"))
+                    if (line.Contains($"ResX={1920 * i}"))
                     {
                         lines[index] = "ResX=" + newResolution;
                     }

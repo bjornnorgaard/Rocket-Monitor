@@ -36,7 +36,7 @@ namespace RocketMonitor.Console
                 return;
             }
 
-            System.Console.WriteLine("Oops. Something didn't workout.");
+            System.Console.WriteLine("Oops. Something didn't work.");
             System.Threading.Thread.Sleep(2000);
         }
     }
