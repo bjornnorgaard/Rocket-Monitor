@@ -9,7 +9,7 @@ namespace RocketMonitor.Console
             var rocketMonitor = new RocketMonitor();
 
             var filePath = Environment.GetEnvironmentVariable("USERPROFILE") + "\\Documents\\my games\\Rocket League\\TAGame\\Config\\TASystemSettings.ini";
-            const int fullHd = 1920;
+            const int baseXresolution = 1920;
             int numberOfPlayers;
 
             System.Console.Write("Number of players: ");
@@ -25,12 +25,12 @@ namespace RocketMonitor.Console
                 return;
             }
 
-            var newResolution = numberOfPlayers * fullHd;
+            var newResolution = numberOfPlayers * baseXresolution;
 
             if (0 < numberOfPlayers && numberOfPlayers < 5)
             {
                 System.Console.WriteLine("Setting new game resolution...");
-                rocketMonitor.ChangeResolution(filePath, newResolution.ToString());
+                rocketMonitor.ChangeHorizontalResolution(filePath, newResolution.ToString());
                 System.Console.WriteLine("Now you can launch the game.");
                 System.Threading.Thread.Sleep(2000);
                 return;

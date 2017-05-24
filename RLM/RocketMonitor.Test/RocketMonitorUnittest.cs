@@ -16,19 +16,19 @@ namespace RocketMonitor.Test
         [Fact]
         public void ChangeResolution_NullPath_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => _rocketMonitor.ChangeResolution(null, "3840"));
+            Assert.Throws<ArgumentException>(() => _rocketMonitor.ChangeHorizontalResolution(null, "3840"));
         }
 
         [Fact]
         public void ChangeResolution_NullResolution_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => _rocketMonitor.ChangeResolution(_filePath, null));
+            Assert.Throws<ArgumentException>(() => _rocketMonitor.ChangeHorizontalResolution(_filePath, null));
         }
 
         [Fact]
         public void ChangeResolution_BothArgumentNull_ThrowsArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => _rocketMonitor.ChangeResolution(null, null));
+            Assert.Throws<ArgumentException>(() => _rocketMonitor.ChangeHorizontalResolution(null, null));
         }
     }
 }

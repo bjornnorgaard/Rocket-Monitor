@@ -5,11 +5,11 @@ namespace RocketMonitor
 {
     public class RocketMonitor
     {
-        public void ChangeResolution(string filePath, string newResolution)
+        public void ChangeHorizontalResolution(string filePath, string newResolution)
         {
             if (filePath == null || newResolution == null)
             {
-                throw new NullReferenceException($"{nameof(ChangeResolution)} failed when given " +
+                throw new NullReferenceException($"{nameof(ChangeHorizontalResolution)} failed when given " +
                                                  $"{nameof(filePath)}: {filePath} and " +
                                                  $"{nameof(newResolution)}: {newResolution}.");
             }
@@ -25,7 +25,7 @@ namespace RocketMonitor
 
             if (validResolution == false)
             {
-                throw new ArgumentException($"{nameof(ChangeResolution)} failed when given " +
+                throw new ArgumentException($"{nameof(ChangeHorizontalResolution)} failed when given " +
                                             $"{nameof(newResolution)}: {newResolution}.");
             }
 
