@@ -34,12 +34,10 @@ namespace RocketMonitor
             for (var index = 0; index < lines.Length; index++)
             {
                 var line = lines[index];
-                for (var i = 1; i < 5; i++)
+
+                if (line.Contains($"ResX=1920") || line.Contains("ResX=3820"))
                 {
-                    if (line.Contains($"ResX={1920 * i}"))
-                    {
-                        lines[index] = "ResX=" + newResolution;
-                    }
+                    lines[index] = "ResX=" + newResolution;
                 }
             }
 
