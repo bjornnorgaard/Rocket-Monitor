@@ -13,29 +13,14 @@ namespace RocketMonitor
                                                  $"{nameof(filePath)}: {filePath} and " +
                                                  $"{nameof(newResolution)}: {newResolution}.");
             }
-
-            var validResolution = false;
-            for (var i = 1; i < 5; i++)
-            {
-                if (int.Parse(newResolution) == 1920 * i)
-                {
-                    validResolution = true;
-                }
-            }
-
-            if (validResolution == false)
-            {
-                throw new ArgumentException($"{nameof(ChangeHorizontalResolution)} failed when given " +
-                                            $"{nameof(newResolution)}: {newResolution}.");
-            }
-
+            
             var lines = File.ReadAllLines(filePath);
 
             for (var index = 0; index < lines.Length; index++)
             {
                 var line = lines[index];
 
-                if (line.Contains($"ResX=1920") || line.Contains("ResX=3820"))
+                if (line.Contains($"ResX=1920") || line.Contains("ResX=3840"))
                 {
                     lines[index] = "ResX=" + newResolution;
                 }
